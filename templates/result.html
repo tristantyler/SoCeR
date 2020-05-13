@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{#<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css" integrity="sha256-x/w94VndJQr7PoDeh6V07DPevWyTk2CvXuDn8PD/dXg=" crossorigin="anonymous" />#}
+{#<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.min.css" integrity="sha256-j4kt570/QlhwKOmo3dnQHGkj85R+ZXcQ70CiQH5xjeY=" crossorigin="anonymous" />#}
+{##}
+{##}
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js" integrity="sha256-L22W5IC7Eyudi+0xlvEJzeDfXk+sC8kdYet7MV9Gmcg=" crossorigin="anonymous"></script>#}
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushPython.min.js" integrity="sha256-cKjhZNi7I8nY5HezLkr9Uc+wDPttqOJR0AAYbkPKMM4=" crossorigin="anonymous"></script>#}
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+    <div class="position-static">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                 <a class="nav-item nav-link" href="/search">Search</a>
+                <a class="nav-item nav-link" href="/upload">Upload</a>
+                <a class="nav-item nav-link" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfv7WbIGGOzrxW8yHDS9hFOBZ48mxTCsF3IqvlRi54YQeJHfw/viewform">Survey</a>
+
+            </div>
+          </div>
+        </nav>
+    </div>
+
+     <div style=" margin-left: 7%;" class="form-group">
+     <br>
+        <h2>Search Result</h2>
+
+       <form method="POST" action="/search">
+           <input type="submit" value="Search Again">
+       </form>
+     </div>
+    <div style="white-space:pre-wrap">
+        Rendered in {{ g.request_time() }}
+        Suggested Queries:
+        <pre>
+        {% for item in result[0] %}
+          **  {{ item[0] }}
+
+        {% endfor %}
+            {% for para in result[1] %}
+            {{para}}
+            {% endfor %}
+        </pre>
+     </div>
+<br>
+{#<form method="POST" action="/search"> {# this action will go into the 'app.py' and execute 'add' method#}
+{#    <input type="submit" value="Search Again">#}
+{#    </form>#}
+</body>
+
+</html>

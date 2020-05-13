@@ -1,0 +1,159 @@
+####        Input String Was: Heap Sort
+
+
+##Function               :
+
+
+def bubbleSort(array):
+    n = len(array) - 1
+    for i in range(0, len(array)):
+        for j in range(0, n):
+            if array[j] > array[j + 1]:
+                swap(array, j + 1, j)
+        n -= 1
+
+
+Similarity With Input:0.3360969272762574
+-------------------------------------
+####        Input String Was: Heap Sort
+
+
+##Function               :
+
+
+def insertionSort(array):
+    for i in range(0, len(array)):
+        j = i
+        while j > 0 and array[j - 1] > array[j]:
+            swap(array, j - 1, j)
+            j -= 1
+
+
+Similarity With Input:0.3360969272762574
+-------------------------------------
+####        Input String Was: Heap Sort
+
+
+##Function               :
+
+
+def selectionSort(array):
+    for i in range(0, len(array)):
+        Ismallest = i
+        for j in range(i + 1, len(array)):
+            if array[j] < array[Ismallest]:
+                Ismallest = j
+        swap(array, i, Ismallest)
+
+
+Similarity With Input:0.3360969272762574
+-------------------------------------
+####        Input String Was: Heap Sort
+
+
+##Function               :
+
+
+def heap_sort(array):
+    """"""
+    heapify(array)
+    end = len(array) - 1
+    while end > 0:
+        swap(array, end, 0)
+        perc_down(array, 0, end - 1)
+        end -= 1
+
+
+Similarity With Input:0.33517574332792605
+-------------------------------------
+####        Input String Was: Heap Sort
+
+
+##Function               :
+
+
+def quickSort(array, start, end):
+    """"""
+    if start < end:
+        split = partition(array, start, end)
+        quickSort(array, start, split - 1)
+        quickSort(array, split + 1, end)
+
+
+Similarity With Input:0.2746117864358065
+-------------------------------------
+####        Input String Was: Heap Sort
+
+
+##Function               :
+
+
+def heapify(array):
+    """"""
+    start = (len(array) - 2) / 2
+    while start >= 0:
+        perc_down(array, start, len(array) - 1)
+        start -= 1
+
+
+Similarity With Input:0.15055696960204948
+-------------------------------------
+####        Input String Was: Heap Sort
+
+
+##Function               :
+
+
+def mergeSort(array, start, end):
+    """"""
+    mid = (start + end) / 2
+    if start < end:
+        mergeSort(array, start, mid)
+        mergeSort(array, mid + 1, end)
+    elif start == end:
+        return
+    L = start
+    R = mid + 1
+    tmp_array = []
+    while L <= mid and R <= end:
+        if array[L] < array[R]:
+            tmp_array.append(array[L])
+            L += 1
+        else:
+            tmp_array.append(array[R])
+            R += 1
+    if L <= mid:
+        tmp_array += array[L:]
+    else:
+        tmp_array += array[R:]
+    i = 0
+    while start <= end:
+        array[start] = tmp_array[i]
+        start += 1
+        i += 1
+
+
+Similarity With Input:0.09339537641256733
+-------------------------------------
+####        Input String Was: Heap Sort
+
+
+##Function               :
+
+
+def perc_down(array, start, end):
+    """"""
+    largest = 2 * start + 1
+    while largest <= end:
+        if largest < end and array[largest] < array[largest + 1]:
+            largest += 1
+        if array[largest] > array[start]:
+            swap(array, largest, start)
+            start = largest
+            largest = 2 * start + 1
+        else:
+            return
+
+
+Similarity With Input:0.08011947727590157
+-------------------------------------

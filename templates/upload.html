@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File</title>
+</head>
+
+
+<body>
+     <div class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/search">Search</a>
+                <a class="nav-item nav-link active" href="#">Upload <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfv7WbIGGOzrxW8yHDS9hFOBZ48mxTCsF3IqvlRi54YQeJHfw/viewform">Survey</a>
+            </div>
+          </div>
+        </nav>
+    </div>
+     <br>
+    <div style=" margin-left: 7%;" class="form-group">
+    <h2>Upload Files </h2>
+
+{#        <form action="upload" method=post enctype=multipart/form-data>#}
+{#            <div class="input-group mb-3" style="    width: 60%;">#}
+{##}
+{#                  <div class="custom-file">#}
+{#                    <input type="file" class="custom-file-input" id="inputGroupFile01">#}
+{#                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>#}
+{#                  </div>#}
+{#                  <div class="input-group-append">#}
+{#                    <input class="btn btn-dark" type=submit value=Upload >#}
+{#                  </div>#}
+{##}
+{#            </div>#}
+{#        </form>#}
+
+{##}
+{#        <div class="input-group">#}
+{#          <div class="input-group-prepend">#}
+{#            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>#}
+{#          </div>#}
+{#          <div class="custom-file">#}
+{#            <input type="file" class="custom-file-input" id="inputGroupFile01"#}
+{#              aria-describedby="inputGroupFileAddon01">#}
+{#            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>#}
+{#          </div>#}
+{#        </div>#}
+
+        <br>
+        <form action="upload" method=post enctype=multipart/form-data>
+            <input type=file name=file>
+            <input  class="btn btn-dark" type=submit value=Upload>
+        </form>
+
+     </div>
+</body>
+</html>
